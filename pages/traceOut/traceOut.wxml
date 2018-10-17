@@ -1,0 +1,5 @@
+<!-- wxml -->
+<!-- 外链页面的web-view -->
+<!-- <web-view src="{{url}}" bindChange="bindGetMsg"></web-view> -->
+<web-view src="{{url}}" bindChange="bindGetMsg"></web-view>
+<!-- <web-view src='https://sy.yonghui.cn/trace/html/showTraceInfo/921108/123'></web-view> -->

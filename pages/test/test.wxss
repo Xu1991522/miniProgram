@@ -1,0 +1,9 @@
+    .container {
+       background-color: #ccc;
+      height:80rpx;
+       margin: 20rpx 20rpx 20rpx 20rpx; 
+      overflow:auto;
+    }
+    .txt-light {
+      color:#acadbe;
+    }

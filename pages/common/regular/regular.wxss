@@ -1,0 +1,96 @@
+.regular-box{
+  position: relative;
+}
+.item-regular-header{
+  display: flex;
+  flex-direction: row;
+  background:rgba(20,167,59,0.1);
+  padding: 30rpx 34rpx;
+}
+.regular-header-img{
+  width: 76rpx;
+  height: 90rpx;
+  margin-right: 24rpx;
+}
+.regular-header-txt{
+  font-size: 28rpx;
+  color: #6B6767;
+  line-height: 44rpx;
+}
+
+/*item-regular-body*/
+.item-regular-body{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  padding: 0 5%;
+}
+.regular-body-left{
+  width: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.regular-body-right{
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  justify-items: center;
+  padding-top:14rpx;
+}
+/* .regular-body-left{
+  width: 20%;
+}
+.regular-body-right{
+  width: 80%
+} */
+
+.regular-body-img{
+  position:relative;
+  width:32rpx;
+  height:80rpx;
+  margin:22rpx;
+}
+
+.body-img-start{
+  position:relative;
+  width:32rpx;
+  height:40rpx;
+  overflow-y: hidden
+}
+.img-start{
+  top:-40rpx;
+  position:absolute;
+  width:32rpx;
+  height:80rpx;
+}
+.body-img-end{
+  position:relative;
+  width:32rpx;
+  height:40rpx;
+  overflow-y: hidden
+}
+.img-end{
+  width:32rpx;
+  height:80rpx;
+}
+.body-img-label{
+  width: 60rpx;
+  height: 72rpx;
+}
+
+/*body-right-img css start*/
+.body-right-img{
+  width: 494rpx;
+  height: 160rpx;
+  margin:10px 0;
+}

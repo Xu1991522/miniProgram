@@ -1,0 +1,22 @@
+<template name="top_click">
+  <view class='hot-block'>
+    <view class='block-item01' bindtap='scan'>
+      <view class="scan-bg">
+        <image class="block-img" src='../../images/scan.png' mode="aspectFill"></image>
+      </view>
+      <text class="block-txt">扫码溯源</text>
+    </view>
+    <view class='block-item02' bindtap='viewHistory'>
+      <view class="history-bg">
+        <image class="block-img" src='../../images/record.png' mode="aspectFill"></image>
+      </view>
+      <text class="block-txt">查看记录</text>
+    </view>
+    <!-- <view class='block-item03' bindtap='viewQualities'>
+      <view class="qQualities-bg">
+        <image class="block-img test-img" src='../../images/q_test.png' mode="aspectFill"></image>
+      </view>
+      <text class="block-txt">检测记录</text>
+    </view> -->
+  </view>
+</template>

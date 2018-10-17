@@ -1,0 +1,22 @@
+<template name="news">
+  <view class='news-box'>
+  <block wx:for='{{newsList}}' wx:key='index'>
+      <view class='item-news' data-newsid='{{item.id}}' bindtap='newsHots'>
+        <view class='item-news-txt'>
+          <text class='item-news-title'>{{item.title}}</text>
+          <text class='item-news-content'>{{item.content}}</text>
+        </view>
+        <text class='item-news-time'>发布日期：{{item.publish_date}} 来源： {{item.source}}</text>
+      </view>
+    </block>  
+    <!-- <block wx:for='{{newsList}}' wx:key='index'>
+      <view class='item-news'>
+        <view class='item-news-txt'>
+          <text class='item-news-title'>关于9批次食品不合格情况的通告（2018年第36号）</text>
+          <text class='item-news-content'>近期，重庆市食品药品监督管理局组织抽检餐饮食品、茶叶及相关制品、淀粉及淀粉制品、豆制品、方便食品、糕点、淀粉及淀粉制品、豆制品、方便食品、糕点</text>
+        </view>
+        <text class='item-news-time'>2018-08-24 18:20:30</text>
+      </view>
+    </block>   -->
+  </view>
+</template>

@@ -1,0 +1,13 @@
+<template name="top_block">
+  <block>
+    <view class="blockchain-panel">
+      <view class="blockchain-message" animation="{{animationBlockchain}}">
+        <text class="blockchain-txt blockchain-txt1">区块高度：{{blockchain.height}}</text>
+        <text style='font-size:24rpx;'>，</text>
+        <text class="blockchain-txt blockchain-txt2">最新区块：{{blockchain.currentHash}}</text>
+        <text style='font-size:24rpx;'>，</text>
+        <text class="blockchain-txt blockchain-txt2">上一区块：{{blockchain.previousHash}}</text>
+      </view>
+    </view>
+  </block>
+</template>

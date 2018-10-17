@@ -1,0 +1,38 @@
+.news-box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.item-news{
+  position: relative;
+  padding: 4%;
+  border-bottom: 1px solid #eee;
+}
+.item-news-txt{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.item-news-title{
+  position: relative;
+  font-size: 28rpx;
+  line-height:44rpx;
+}
+.item-news-content,.item-news-time{
+  position: relative;
+  font-size: 24rpx; 
+}
+.item-news-content{
+  color: #6B6767;
+  line-height:40rpx;
+  /* height: 80rpx; */
+  overflow: hidden;
+text-overflow: ellipsis;
+display:-webkit-box; /*作为弹性伸缩盒子模型显示。*/
+-webkit-box-orient:vertical; /*设置伸缩盒子的子元素排列方式--从上到下垂直排列*/
+-webkit-line-clamp:2; /*显示的行*/
+}
+.item-news-time{
+  color: #bbb;
+  margin-top:12rpx;
+}

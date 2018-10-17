@@ -1,0 +1,19 @@
+<template name="sort_list">
+  <view class='heard-box'>
+    <view class="heard-search sort-search">
+      <view class="heard-search-btn" bindtap="search"><image src="../../images/search.png" class="heard-search-icon" mode="aspectFill" /></view>
+      <input placeholder="多宝鱼" class='sort-search-ipt' bindchange='input'></input>
+      <!-- <input placeholder="多宝鱼" bindchange="input" class='sort-search-ipt'></input> -->
+    </view>
+  </view>
+  
+  <view class="sort-list">
+    <!-- <view class="sort sort-search" bindtap=""><image src="../../images/search.png" class="heard-search-icon" mode="aspectFill" /> <input placeholder="多宝鱼"
+   bindinput="input" class='sort-search-ipt'></input></view> -->
+    <view class="sort" bindtap="onOverallTag">{{sortTimeSelected}} <image src="../../images/down.png" mode="aspectFill" style="width:20rpx;height:20rpx;"></image></view>
+    <view class="sort" bindtap="onArea">地点 <image src="../../images/locat.png" mode="aspectFill" style="width:22rpx;height:22rpx;"></image></view>
+    <!-- <view data-index="0"  bindtap="onTapTag" class="sort {{selected == 0?'sort-active':''}}">销量最高</view>
+    <view data-index="1" bindtap="onTapTag" class="sort {{selected == 1?'sort-active':''}}">距离最近</view> -->
+    <view class="sort" bindtap="onFilter">筛选 <image src="../../images/screen.png" mode="aspectFill" style="width:22rpx;height:22rpx;"></image></view>
+  </view>
+</template>

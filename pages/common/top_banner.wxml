@@ -1,0 +1,46 @@
+<template name="top_banner">
+  <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="true" interval="5000">
+    <swiper-item>
+      <image id="7" src="../../images/yh1.png" mode="aspectFill" data-postId="3"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/yh2.png" mode="aspectFill" data-postId="4"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/yh3.png" mode="aspectFill" data-postId="5"></image>
+    </swiper-item>
+  </swiper>
+  <!-- <block>
+    <view class="blockchain-panel">
+      <view class="blockchain-message" animation="{{animationBlockchain}}">
+        <text class="blockchain-txt blockchain-txt1">区块高度：{{blockchain.height}}</text>
+        <text style='font-size:24rpx;'>，</text>
+        <text class="blockchain-txt blockchain-txt2">最新区块：{{blockchain.currentHash}}</text>
+        <text style='font-size:24rpx;'>，</text>
+        <text class="blockchain-txt blockchain-txt2">上一区块：{{blockchain.previousHash}}</text>
+      </view>
+    </view>
+  </block> -->
+  <!-- hot-block start -->
+  <!-- <view class='hot-block'>
+    <view class='block-item01' bindtap='scan'>
+      <view class="scan-bg">
+        <image class="block-img" src='../../images/scan.png' mode="aspectFill"></image>
+      </view>
+      <text class="block-txt">扫码溯源</text>
+    </view>
+    <view class='block-item02' bindtap='viewHistory'>
+      <view class="history-bg">
+        <image class="block-img" src='../../images/record.png' mode="aspectFill"></image>
+      </view>
+      <text class="block-txt">查看记录</text>
+    </view>
+    <view class='block-item03' bindtap='viewQualities'>
+      <view class="qQualities-bg">
+        <image class="block-img test-img" src='../../images/q_test.png' mode="aspectFill"></image>
+      </view>
+      <text class="block-txt">检测记录</text>
+    </view>
+  </view> -->
+  <!-- hot-block end -->
+</template>

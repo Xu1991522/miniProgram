@@ -1,0 +1,38 @@
+<!--pages/qualityHistory/qualityHistory.wxml-->
+<scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: {{winH}}px;">
+  <view class='qualityHistory-container' wx:if='{{isData}}'>
+    <view class='item-qHistory-banner'>
+      <image mode="aspectFill" class='banner-img' src='../../images/h_banner.png'></image>
+      <text class='banner-txt'>{{qData[0].goods_name}}-{{qData[0].supplier_no}}</text>
+    </view>
+    <view class='item-qHistory-list' wx:for="{{qTimeList}}" wx:key="index">
+      <view class='qHistory-list-block'>
+        <view class='list-block-time'>
+          <text class='time-txt'>{{item.t1}}</text>
+          <text class='time-txt list-txt-color'>{{item.t2}}</text>
+        </view>
+        <view class="list-block-axie {{item.index == 0?'axie-top':''}}">
+          <view class='axie-cicle'></view>
+          <view class='axie-line'></view>
+        </view>
+        <image mode="aspectFit" class='block-img' src='../../images/h_yes.png' wx:if="{{qualified}}== '1'"></image>
+        <image mode="aspectFit" class='block-img' src='../../images/h_no.png' wx:else></image>
+        <view class='list-block-status'>
+          <text class='status-txt'>{{item.test_item_name}}-{{item.test_value}}{{item.test_unit}}</text>
+          <text class='status-txt'>{{item.test_site}}</text>
+          <text class='status-txt'>检查人{{item.test_person}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="loading" hidden="{{!searchLoading}}">
+      <image class='loading-before' src='../../images/load.png' mode="aspectFill"></image>
+      正在载入更多...
+    </view>
+    <view class="loading complete" hidden="{{!searchLoadingComplete}}">没有相关数据</view>
+  </view>
+  <view class='no-RecordHistory' wx:else>
+    <image class='no-img' src='../../images/q_test.png' mode="aspectFill"></image>
+    <text class='no-txt'>暂无检测记录</text>
+  </view>
+</scroll-view>
+

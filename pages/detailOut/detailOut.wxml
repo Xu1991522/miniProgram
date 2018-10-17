@@ -1,0 +1,2 @@
+<!--pages/detailOut/detailOut.wxml-->
+<web-view src="{{url}}"></web-view>

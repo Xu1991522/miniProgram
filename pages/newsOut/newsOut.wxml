@@ -1,0 +1,2 @@
+<!--pages/newsOut/newsOut.wxml-->
+<web-view src="{{url}}"></web-view>

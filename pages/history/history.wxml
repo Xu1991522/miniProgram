@@ -1,0 +1,25 @@
+<!--pages/history/history.wxml-->
+<view class='container'>
+  <view class='item-isData-content' wx:if="{{record}}">
+    <view wx:for="{{historyList}}" wx:key="item.index" class="etem-block">
+    <!-- <view class="etem-block"> -->
+      <image class='item-history-img' src='../../images/q_logo.png' mode="aspectFill"></image>
+      <view class='item-history-list'>
+        <view class="item-list">商品名称：{{item.product_name}}</view>
+        <view class="item-list">查询时间：{{item.search_time}}</view>
+        <view class="item-list">查询次数：{{item.count}}</view>
+      </view>
+    </view>
+    <!-- <view class="etem-block">
+      <image class='item-history-img' src='../../images/dby.png' mode="aspectFill"></image>
+      <view class='item-history-list'>
+        <view class="item-list">商品名称：{{item.search_name}}</view>
+        <view class="item-list">查询时间：{{item.search_time}} 查询次数：{{item.search_counts}}</view>
+      </view>
+    </view> -->
+  </view>
+  <view class='item-noData-content' wx:else>
+    <image class='item-noData-img' src='../../images/history2.png'></image>
+    <text class='item-noData-txt'>暂无扫码记录</text>
+  </view>
+</view>

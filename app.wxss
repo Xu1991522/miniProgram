@@ -1,0 +1,247 @@
+/**app.wxss**/
+text{
+  font:20px "microsoft yahei,italic arial,sans-serif";
+  /* font:italic arial,sans-serif; */
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  font:20px "microsoft yahei";
+} 
+.wxParse-img {
+  display: block !important;
+}
+
+/*defind tabbar css start*/
+.tabbar_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 120rpx;
+    border-top: 1rpx solid gray; 
+}
+ 
+.tabbar_nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 28rpx;
+    height: 100%;
+}
+ 
+.tabbar_icon{
+    width: 61rpx;
+    height: 61rpx;
+}
+
+/* top css start*/
+swiper {
+  width: 100%;
+  height: 220rpx;
+}
+
+/*less sass*/
+
+swiper image {
+  width: 100%;
+  height: 220rpx;
+}
+
+/* blockchain */
+.blockchain-panel{
+  position: relative;
+  width:96%;
+  height:80rpx;
+  display:flex;
+  flex:none;
+  flex-direction:row;
+  background-color:#fff;
+  padding: 0 2%; 
+  border-bottom:1px solid #eee
+}
+
+.blockchain-message{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.blockchain-txt{
+  font-size: 24rpx;
+  color: #333;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  /* padding-left:12rpx; */
+}
+.blockchain-txt1{ 
+  min-width: 194rpx;
+}
+.blockchain-txt2{
+  width: 244rpx !important;
+}
+/* hot-block */
+
+.hot-block {
+  padding: 10px 18%;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin: 10px 0;
+  justify-content: space-between;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee
+}
+
+.block-item01, .block-item02, .block-item03 {
+  /* width: 50%; */
+  display: block;
+  text-align: center;
+}
+
+.history-bg, .scan-bg, .qQualities-bg {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.scan-bg {
+  background-color: #fc6565;
+}
+
+.history-bg {
+  background-color: #fe9230;
+}
+
+.qQualities-bg {
+  background-color: #469208;
+}
+
+.block-img {
+  position: relative;
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-top: 25rpx;
+}
+
+.test-img {
+  width: 50rpx;
+  height: 60rpx;
+  margin-top:20rpx;
+}
+
+.block-txt {
+  font-size: 14px;
+}
+
+/* list-goods */
+
+.list-goods {
+  width: 100%;
+  height: auto;
+}
+
+/* tabs */
+
+.swiper-tab {
+  line-height: 80rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  color: #777;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.active {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+
+image {
+  width: 100%;
+}
+
+/*top css end*/
+
+/*tabbar-list css start*/
+.tabbar-list-fixed{
+  position: fixed;
+  top:-10px;
+  width:100%;
+  z-index: 1000;
+}
+.tabbar-list{
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin: 10px 0 0 0;
+  justify-content: space-between;
+}
+.tabbar-item{
+  text-align: center;
+  display:flex;
+  flex:1;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100rpx;
+  font-size: 28rpx;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+}
+.tabbar-item01,.tabbar-item02{
+  border-right:1px solid #eee;
+}
+.activeTabbar{
+  border-top: 1px solid #fe9230;
+  color: #fe9230;
+}
+.activeTabbarCon{
+  display: none;
+  background:#fff;
+}
+.activeTabbarConShow{
+  display: block;
+}
+.tabbar-border{
+  background-color: #fff;
+  padding-bottom:350rpx;
+}
+/*tabbar-list css end*/

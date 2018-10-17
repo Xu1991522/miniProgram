@@ -1,0 +1,136 @@
+<!--pages/testData/testData.wxml-->
+<!-- search start -->
+<!-- <view class="search">
+  <view class="search-bar">
+    <view class="search-wrap">
+        <icon type="search" size="16" class="icon-search" />
+        <input type="text" placeholder="请输入搜索内容" class="search-input" name="searchKeyword" bindinput="bindKeywordInput" value="{{searchKeyword}}" />
+    </view>
+    <view class="search-cancel" bindtap="keywordSearch">搜索</view>
+  </view>
+</view> -->
+<import src="../common/sort_list.wxml" />
+<view class="mask" hidden="{{mask1Hidden}}" bindtap="mask1Cancel">
+  <template is="sort_list" data="{{selected,sortTimeSelected}}" />
+  <view class="overall-sort-list">
+    <block wx:for="{{sortTimeList}}" wx:key="index">
+      <view class="overall-sort" data-index="{{index}}" data-timetype="{{item.order_typpe}}" bindtap="sortTimeChoosed">{{item.sortTime}}</view>
+    </block>
+  </view>
+</view>
+<view class="mask" hidden="{{mask2Hidden}}" bindtap="mask2Cancel">
+  <template is="sort_list" data="{{selected,sortTimeSelected}}" />
+  <scroll-view class="filterList" scroll-y="true">
+    <view class="container0">
+      <view class="left_tabbar">
+          <view wx:for='{{tab}}' wx:key="index" class="tabOne left_tabbar_item {{activeIndex==index?'active':''}}">
+            <view catchtap="changeTab" data-index="{{index}}" data-name="{{item.name}}" class='tab-first-name'>{{item.name}}</view>
+          </view>
+      </view>
+      <view class="center_tabbar">
+        <!-- <scroll-view scroll-y="true" style="height:{{winH}}px;" class="left_tabbar_list"> -->
+          <view wx:for="{{tabTypeChild[activeIndex]}}" wx:key="index" data-index='{{index}}' catchtap="s_changeTab" class="tab-second left_tabbar_item {{sIndex==index?'active':''}}">
+            <view class='tab-second-name'>{{item.name}}</view>
+          </view>
+        <!-- </scroll-view> -->
+      </view>
+      <view class="right_content"> 
+        <view wx:for="{{tabTypeChild[activeIndex][sIndex]}}" wx:key="index" data-index='{{index}}' catchtap="t_changeTab" class='tab-third'>
+        <view wx:for="{{item}}" wx:for-item="i" class="filterList-characteristic-item {{discountSelected2==index?'characteristic-selected':''}}" catchtap="discountSelected" data-index="{{index}}" data-id="{{i.id}}" wx:if="{{i.name}}">{{i.name}}</view>
+          </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="filterList-footer">
+    <view class="filterList-footer-delect" catchtap="clearSelectedNumb" data-finish='type'>清除筛选</view>
+    <view class="filterList-footer-finish" bindtap="finish" data-finish='type'>完成
+      <view class="filterList-footer-finish-number" hidden="{{selectedNumb2==0}}">{{selectedNumb2}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class="mask" hidden="{{mask3Hidden}}" bindtap="mask3Cancel">
+  <template is="sort_list" data="{{selected,sortTimeSelected}}" />
+  <scroll-view class="filterList" scroll-y="true">
+    <view class="container0">
+      <view class="left_tabbar">
+          <view wx:for='{{area}}' wx:key="index" class="tabOne left_tabbar_item {{local_activeIndex==index?'active':''}}">
+            <view catchtap="changeTab2" data-index="{{index}}" data-name="{{item.name}}" class='tab-first-name'>{{item.name}}</view>
+          </view>
+      </view>
+      <view class="center_tabbar">
+        <!-- <scroll-view scroll-y="true" style="height:{{winH}}px;" class="left_tabbar_list"> -->
+          <view wx:for="{{areaChild[local_activeIndex]}}" wx:key="index" data-index='{{index}}' catchtap="a_changeTab" class="tab-second left_tabbar_item {{areaIndex==index?'active':''}}">
+            <view class='tab-second-name'>{{item.name}}</view>
+          </view>
+        <!-- </scroll-view> -->
+      </view>
+      <view class="right_content">
+          <view wx:for="{{areaChild[local_activeIndex][areaIndex]}}" wx:key="index" data-index='{{index}}' class='tab-third'>
+            <view wx:for="{{item}}" wx:for-item="i" wx:key="index" class="filterList-characteristic-item {{discountSelected1==index?'characteristic-selected':''}}" catchtap="discountSelected" data-index="{{index}}" data-code="{{i.code}}" wx:if="{{i.name}}">{{i.name}}</view>
+          </view>
+      </view>
+    </view>
+    <!-- <view class="filterList-characteristic-items">
+      <block wx:for="{{characteristicList}}" wx:key="">
+        <view class="filterList-characteristic-item {{characteristicSelected[index]==true?'characteristic-selected':''}}"
+        catchtap="characteristicSelected" data-index="{{index}}">{{item.text}}</view>
+      </block>
+    </view> -->
+    <!-- <view class="filterList-discount-title">优惠活动(单选)</view>
+    <view class="filterList-discount-items">
+      <block wx:for="{{discountList}}" wx:key="">
+        <view class="filterList-discount-item {{discountSelected==index?'discount-selected':''}}"
+        catchtap="discountSelected" data-index="{{index}}">
+          <text class="filterList-discount-item-icon"
+          style="background:{{item.iconColor}}">{{item.icon}}</text>
+        {{item.text}}</view>
+      </block>
+    </view> -->
+  </scroll-view>
+  <view class="filterList-footer">
+    <view class="filterList-footer-delect" catchtap="clearSelectedNumb" data-finish='area'>清除筛选</view>
+    <view class="filterList-footer-finish" bindtap="finish" data-finish='area'>完成
+      <view class="filterList-footer-finish-number" hidden="{{selectedNumb1==0}}">{{selectedNumb1}}
+      </view>
+    </view>
+  </view>
+</view>
+<view class="search">
+  <template is="sort_list" data="{{selected,sortTimeSelected}}" />
+</view>
+<!-- search end -->
+<view class='result'>
+  <view class="qualities-result">
+    <scroll-view scroll-y="true" bindscrolltolower="searchScrollLower" style="height: {{winH}}px;">
+      <view class="result-item" wx:for="{{qualitiesData}}" wx:key="index">
+        <view class='item-block' bindtap='viewHistory' data-currentIdx='{{item.goods_no}}' data-currentName='{{item.goods_name}}'>
+          <view class='block-img-content'>
+            <image class='img-icon' src='../../images/q_logo.png' mode="aspectFill"></image>
+            <view class='img-name'>{{item.goods_name}}</view>
+            <image class='pass' src='../../images/pass.png' mode="aspectFill" wx:if="{{showModalStatus}}=='1'"></image>
+            <image class='pass' src='../../images/noPass.png' mode="aspectFill" wx:else></image>
+          </view>
+          <view class='block-list'>
+            <view class='list-result'>
+              <text>{{item.test_item_name}}-{{item.test_value}}{{item.test_unit}}</text>
+            </view>
+            <view class='list-site'>
+              <text>{{item.test_site}}</text>
+            </view>
+            <view class='list-time'>
+              <text class='list-time-txt01'>{{item.test_time}}</text>
+              <text class='list-time-txt02'>{{item.test_person}}</text>
+            </view>
+          </view>
+        </view>
+        <!-- <image class='item-history-img' src='../../images/q_history.png' mode="aspectFill"></image> -->
+      </view>
+      <view class="loading" hidden="{{!searchLoading}}">
+        <image class='loading-before' src='../../images/load.png' mode="aspectFill"></image>
+        正在载入更多...
+      </view>
+      <view class="loading complete" hidden="{{!searchLoadingComplete}}">没有相关数据</view>
+    </scroll-view>
+  </view>
+</view>

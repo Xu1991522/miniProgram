@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/traceOut/traceOut",
+    "pages/newsOut/newsOut",
+    "pages/qualityData/qualityData",
+    "pages/childQualityHistory/childQualityHistory",   
+    "pages/history/history",
+    "pages/detailOut/detailOut",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "物种起源U",
+    "navigationBarTextStyle": "black"
+  }
+}

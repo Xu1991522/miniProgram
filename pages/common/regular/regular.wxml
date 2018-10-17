@@ -1,0 +1,30 @@
+<template name="regular">
+  <view class='regular-box'>
+    <view class="item-regular-header">
+      <image class='regular-header-img' src='../../images/you.png' mode="aspectFill"></image>
+      <text class='regular-header-txt'>永辉5优生鲜溯源标准，5个维度溯源优品认证 \n 区块链技术确保可追溯、透明可信、不可篡改</text>
+    </view>
+    <view class="item-regular-body">
+      <view class="regular-body-left">
+        <view class='regular-body-img body-img-start'><image class='img-start' src='../../images/chain.png' mode="aspectFill"></image></view>
+        <image class='body-img-label' src='../../images/r_xin.png' mode="aspectFill"></image>
+        <image class='regular-body-img' src='../../images/chain.png' mode="aspectFill"></image>
+        <image class='body-img-label' src='../../images/r_zhi.png' mode="aspectFill"></image>
+        <image class='regular-body-img' src='../../images/chain.png' mode="aspectFill"></image>
+        <image class='body-img-label' src='../../images/r_xian.png' mode="aspectFill"></image>
+        <image class='regular-body-img' src='../../images/chain.png' mode="aspectFill"></image>
+        <image class='body-img-label' src='../../images/r_j.png' mode="aspectFill"></image>
+        <image class='regular-body-img' src='../../images/chain.png' mode="aspectFill"></image>
+        <image class='body-img-label' src='../../images/r_s.png' mode="aspectFill"></image>
+        <view class='regular-body-img body-img-end'><image class='img-end' src='../../images/chain.png' mode=""></image></view>
+      </view>
+      <view class="regular-body-right">
+        <image class='body-right-img' src='../../images/r_p_yz.png' mode="aspectFill"></image>
+        <image class='body-right-img' src='../../images/r_p_sc.png' mode="aspectFill"></image>
+        <image class='body-right-img' src='../../images/r_p_gz.png' mode="aspectFill"></image>
+        <image class='body-right-img' src='../../images/r_p_jy.png' mode="aspectFill"></image>
+        <image class='body-right-img' src='../../images/r_p_fw.png' mode="aspectFill"></image>
+      </view>
+    </view>
+  </view>
+</template>
